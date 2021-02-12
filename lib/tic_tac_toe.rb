@@ -22,8 +22,8 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 
-  def input_to_index(user_input)
-    index = gets.chomp.to_i
+  def input_to_index
+    index = gets.chomp.to_i - 1
   end
 
   def move(input, token = "X")
@@ -49,7 +49,7 @@ class TicTacToe
 
   def turn
     puts "Please enter 1-9:"
-    input = gets.strip
+    input = input_to_index
     if valid_move?(input)
       move(input, current_player)
       display_board
