@@ -23,7 +23,7 @@ class TicTacToe
   end
 
   def input_to_index(user_input)
-    index = gets.strip 
+    index = gets.strip.to_i
   end
 
   def move(input, token = "X")
