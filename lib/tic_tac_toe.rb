@@ -39,10 +39,9 @@ class TicTacToe
   end
 
   def valid_move?(move)
-    integer = move.to_i - 1
-    if position_taken?(integer) == true
+    if position_taken?(move) == true
       false
-    elsif position_taken?(integer) == false && integer.between?(0,8) == true
+    elsif position_taken?(move) == false && move.between?(0,8) == true
       true
     end
   end
